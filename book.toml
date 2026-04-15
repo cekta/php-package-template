@@ -1,0 +1,9 @@
+[book]
+authors = ["Evgeniy Kuvshinov"]
+language = "ru"
+src = "docs"
+title = "CEKTA/PHP-PACKAGE-TEMPLATE"
+
+[output.html]
+default-theme = "rust"
+preferred-dark-theme = "ayu"

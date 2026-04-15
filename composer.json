@@ -1,0 +1,50 @@
+{
+  "name": "cekta/example",
+  "description": "",
+  "type": "library",
+  "license": "GPL-3.0-only",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "infection/extension-installer": true
+    }
+  },
+  "require": {
+    "php": ">=8.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "@stable",
+    "squizlabs/php_codesniffer": "@stable",
+    "phpstan/phpstan": "@stable",
+    "infection/infection": "@stable"
+  },
+  "scripts": {
+    "test": [
+      "@composer install",
+      "@phpcs",
+      "@phpstan",
+      "@phpunit",
+      "@infection"
+    ],
+    "phpcs": "./vendor/bin/phpcs",
+    "phpstan": "./vendor/bin/phpstan analyse --memory-limit=-1",
+    "phpunit": "./vendor/bin/phpunit",
+    "infection": "./vendor/bin/infection --show-mutations"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "App\\Test\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Evgeniy Kuvshinov",
+      "email": "smpl@itmywork.com"
+    }
+  ]
+}
