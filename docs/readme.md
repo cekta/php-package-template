@@ -7,7 +7,7 @@
 2. Проверка code style на соответствие [PSR-12](https://www.php-fig.org/psr/psr-12/) с
    помощью [squizlabs/php_codesniffer](https://github.com/squizlabs/php_codesniffer).
 3. Статический анализ [phpstan](https://phpstan.org/) с максимальным уровнем проверки (level 10).
-4. Запуск автотестов с помощью [phpunit](https://phpunit.de/index.html).
+4. Запуск автотестов с помощью [testo](https://php-testo.github.io/).
 5. Запуск [infection](https://infection.github.io/) (мутационное тестирование оценивающие ваши автотесты) - можно
    отключить, опционально.
 6. Из релизной версии пакета удалено все инструменты разработки, только /src и все необходимое.
@@ -76,6 +76,3 @@
 1. [GITHUB ISSUE](https://github.com/cekta/php-package-template/issues) для багов, предложений по улучшениям и тд.
 2. [Чат в telegram](https://t.me/dev_ru).
 3. Направляйте ваши Pull Request.
-
-
-

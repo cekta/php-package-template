@@ -1,8 +1,8 @@
 {
+  "testFramework": "testo",
+  "tmpDir": "/tmp/infection",
   "source": {
-    "directories": [
-      "src"
-    ]
+    "directories": ["src"]
   },
   "mutators": {
     "@default": true

@@ -10,25 +10,26 @@
     }
   },
   "require": {
-    "php": ">=8.2"
+    "php": ">=8.3"
   },
   "require-dev": {
-    "phpunit/phpunit": "@stable",
     "squizlabs/php_codesniffer": "@stable",
     "phpstan/phpstan": "@stable",
-    "infection/infection": "@stable"
+    "infection/infection": "dev-master",
+    "testo/testo": "@stable",
+    "testo/bridge-infection": "@stable"
   },
   "scripts": {
     "test": [
       "@composer install",
       "@phpcs",
       "@phpstan",
-      "@phpunit",
+      "@testo",
       "@infection"
     ],
     "phpcs": "./vendor/bin/phpcs",
     "phpstan": "./vendor/bin/phpstan analyse --memory-limit=-1",
-    "phpunit": "./vendor/bin/phpunit",
+    "testo": "./vendor/bin/testo",
     "infection": "./vendor/bin/infection --show-mutations"
   },
   "autoload": {
