@@ -15,7 +15,7 @@
   "require-dev": {
     "squizlabs/php_codesniffer": "@stable",
     "phpstan/phpstan": "@stable",
-    "infection/infection": "dev-master",
+    "infection/infection": "@stable",
     "testo/testo": "@stable",
     "testo/bridge-infection": "@stable"
   },
