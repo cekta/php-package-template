@@ -8,31 +8,31 @@ shell: dev
 
 .PHONY: ci
 ci:
-	docker compose run --rm app composer test
+	docker compose run --rm app composer ci
 
-.PHONY: test-8.3
-test-8.3:
+.PHONY: php-8.3
+php-8.3:
 	docker compose down
 	PHP_VERSION=8.3 docker compose build
 	$(MAKE) dev
 	docker compose exec app composer update
-	docker compose exec app composer test
+	docker compose exec app composer ci
 
-.PHONY: test-8.4
-test-8.4:
+.PHONY: php-8.4
+php-8.4:
 	docker compose down
 	PHP_VERSION=8.4 docker compose build
 	$(MAKE) dev
 	docker compose exec app composer update
-	docker compose exec app composer test
+	docker compose exec app composer ci
 
-.PHONY: test-8.5
-test-8.5:
+.PHONY: php-8.5
+php-8.5:
 	docker compose down
 	PHP_VERSION=8.5 docker compose build
 	$(MAKE) dev
 	docker compose exec app composer update
-	docker compose exec app composer test
+	docker compose exec app composer ci
 
 .PHONY: docs-shell
 docs-shell: dev

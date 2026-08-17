@@ -27,7 +27,7 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: run
+      - name: ci
         run: make ci
         env:
           TTY: "false"

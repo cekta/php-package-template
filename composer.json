@@ -20,7 +20,7 @@
     "testo/bridge-infection": "@stable"
   },
   "scripts": {
-    "test": [
+    "ci": [
       "@composer install",
       "@phpcs",
       "@phpstan",
